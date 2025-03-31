@@ -2,6 +2,7 @@ import { useAppStore } from "../stores/useAppStore"
 
 const GenerateAI = () => {
     const showNotification = useAppStore(state => state.showNotification)
+    const generateRecipe = useAppStore(state => state.generateRecipe)
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -16,6 +17,8 @@ const GenerateAI = () => {
             })
             return
         }
+
+        await generateRecipe(prompt)
     }
 
     return (
