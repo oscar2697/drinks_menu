@@ -14,16 +14,20 @@ A React-based web application for discovering, saving, and generating cocktail r
 
 ## Installation
 1. Clone repository:
-
+```bash
 git clone https://github.com/yourusername/cocktail-explorer.git
 cd cocktail-explorer
+```
 
 2. Install dependencies:
-
+```bash
 npm install
+```
 
 3. Create .env file in root directory:
+```bash
 VITE_OPENROUTER_KEY=your_api_key_here
+```
 
 Technologies Used
 ⚛️ React + TypeScript
@@ -41,6 +45,7 @@ Technologies Used
 🎨 Tailwind CSS (Styling)
 
 Project Structure:
+```bash
 src/
 ├── components/       # Reusable components
 ├── services/         # API service handlers
@@ -50,12 +55,14 @@ src/
 ├── views/            # Page components
 ├── main.tsx          # App entry point
 └── router.tsx        # Routing configuration
-
+```
 
 Environment Variables
-Variable	Description
-VITE_OPENROUTER_KEY	API key for OpenRouter AI services
 
+Variable	Description
+```bash
+VITE_OPENROUTER_KEY	API key for OpenRouter AI services
+```
 
 Contributing
 Contributions are welcome! Please follow these steps:
