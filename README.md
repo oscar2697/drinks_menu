@@ -15,7 +15,7 @@ A React-based web application for discovering, saving, and generating cocktail r
 ## Installation
 1. Clone repository:
 ```bash
-git clone https://github.com/yourusername/cocktail-explorer.git
+git clone https://github.com/oscar2697/drinks_menu.git
 cd cocktail-explorer
 ```
 
