@@ -1,8 +1,11 @@
+import Loader from "../components/Loader"
 import { useAppStore } from "../stores/useAppStore"
 
 const GenerateAI = () => {
     const showNotification = useAppStore(state => state.showNotification)
     const generateRecipe = useAppStore(state => state.generateRecipe)
+    const recipe = useAppStore(state => state.recipe)
+    const isgenerating = useAppStore(state => state.isgenerating)
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -35,13 +38,14 @@ const GenerateAI = () => {
                             name="prompt"
                             id="prompt"
                             className="border bg-white p-4 rounded-lg w-full border-slate-800"
-                            placeholder="Genera una receta con ingredientes. Ej. Bebida con Tequila y Fresa"
+                            placeholder="Thirsty? Enter an ingredient to create a recipe!"
                         />
 
                         <button
                             type="submit"
                             aria-label="Enviar"
-                            className={`cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2`}
+                            className={`cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2  ${isgenerating ? 'cursor-not-allowed opacity-50' : ''}`}
+                            disabled={isgenerating}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                 stroke="currentColor" className="w-10 h-10">
@@ -52,7 +56,11 @@ const GenerateAI = () => {
                     </div>
                 </form>
 
-                <div className="py-10 whitespace-pre-wrap"></div>
+                {isgenerating && <Loader />}
+
+                <div className="py-10 whitespace-pre-wrap">
+                    {recipe}
+                </div>
             </div>
         </>
     )
