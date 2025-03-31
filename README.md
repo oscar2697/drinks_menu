@@ -1,4 +1,4 @@
-# Cocktail Recipe Explorer 🍹
+# Drinks Menu Explorer 🍹
 
 A React-based web application for discovering, saving, and generating cocktail recipes using TheCocktailDB API and AI-powered recipe generation via OpenRouter.
 
@@ -76,3 +76,11 @@ Commit your changes (git commit -m 'Add some amazing feature')
 Push to the branch (git push origin feature/amazing-feature)
 
 Open a Pull Request
+
+![App Preview](./public/demo-screenshot.png) 
+![App Preview](./public/menu.png) 
+![App Preview](./public/recipes.png) 
+![App Preview](./public/modal.png) 
+![App Preview](./public/favorites.png) 
+![App Preview](./public/ia1.png) 
+![App Preview](./public/ia.png) 
